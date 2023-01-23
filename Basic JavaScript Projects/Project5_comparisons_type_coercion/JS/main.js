@@ -20,6 +20,12 @@ document.write(3 == 11);
 document.write("<br>");
 //Return true by ensuring to match the data type and value.
 
+//The logical OR (||) (logical disjunction) operator for a set of operands is true if and only if one or more of its operands is true.
+document.write(5 > 10 || 10 > 4);    //OR || operator return “true” because, while 5 is not greater than 10, 10 is greater than 4. 
+document.write("<br>");
+document.write(5 > 10 || 10 > 20);   //or || operator return “false”
+document.write("<br>");
+
 X = 10;
 Y = 10;
 document.write(X === Y);
