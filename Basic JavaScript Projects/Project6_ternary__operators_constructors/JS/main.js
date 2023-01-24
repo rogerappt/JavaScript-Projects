@@ -39,3 +39,19 @@ function newAndThisFunction() {
         "Erik speak to " + Erik.Phone_Color + "-colored " + Erik.Phone_Model +
         " manufactured in " + Erik.Phone_Year;
 }
+//Challenge 9
+function reservedWordFunction() {
+    var boolean = "This is Challenge9";       // The value boolean it is a reserved word and return in Console the error Uncaught ReferenceError: str is not defined at reservedWordFunction
+    document.getElementById("Challenge9").innerHTML = str;
+}
+
+//Assignment 38
+function count_Function() {            //Nested function.
+    document.getElementById("Nested_Function").innerHTML = Count();
+    function Count() {
+        var Starting_point = 9;
+        function Plus_one() { Starting_point += 1; }
+        Plus_one();
+        return Starting_point;
+    }
+}
