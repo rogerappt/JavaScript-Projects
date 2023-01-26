@@ -1,3 +1,4 @@
+//Assignment 39
 /*var X = 10;                              //Global variable. This code would return “30” and “110.
 function Add_numbers_1() {
     document.write(20 + X + "<br>");
@@ -6,11 +7,11 @@ function Add_numbers_2() {
     document.write(X + 100);
 }
 Add_numbers_1();
-Add_numbers_2();*/
-
+Add_numbers_2();
+document.write("<br>");*/
 function Add_numbers_1() {               //Local variable. This code would return “30” because the variable was local – meaning it was written within the function Add_numbers_1 and couldn’t be accessed outside of it.
     var X = 10;
-    document.write(20 + X);
+    document.write(20 + X + "<br>");
 }
 function Add_numbers_2() {
     document.write(X + 100);
@@ -18,7 +19,7 @@ function Add_numbers_2() {
 Add_numbers_1();
 Add_numbers_2();
 
-function Add_numbers_1() {              //code in the browser, no result will be shown. But if you open the console, you’ll see the error “X is not defined.”
+/*function Add_numbers_1() {              //code in the browser, no result will be shown. But if you open the console, you’ll see the error “X is not defined.”
     var X = 10;
     console.log(15 + X);
 }
@@ -26,22 +27,23 @@ function Add_numbers_2() {
     document.write(X + 100);
 }
 Add_numbers_1();
-Add_numbers_2();
+Add_numbers_2();*/
 
+//Assignment  40
 function get_Date() {
     if (new Date().getHours() < 18) {
         document.getElementById("Greeting").innerHTML = "How are you today?";
     }
 }
-
-/*function if_Statement() {            //Assignment 41 - write your own if statemen             
+//Assignment 41 - write your own if statemen  
+function if_Statement() {
     const age = 18;
     if (age >= 18) {
         document.getElementById("Age").innerHTML = "Nick is an adult.";
     } else {
         document.getElementById("Age").innerHTML = "Nick is a child.";
     }
-}*/
+}
 
 function Age_Function() {               //Assignment 42  
     Age = document.getElementById("Age").value;
