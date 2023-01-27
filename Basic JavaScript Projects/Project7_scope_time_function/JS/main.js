@@ -46,8 +46,8 @@ function if_Statement() {
 }
 
 function Age_Function() {               //Assignment 42  
-    Age = document.getElementById("Age").value;
-    if (Age >= 18) {
+    age = document.getElementById("Ages").value;
+    if (age >= 18) {
         Vote = "You are old enuough to vote!";
     }
     else {
