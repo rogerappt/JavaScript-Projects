@@ -1,13 +1,15 @@
-/*let text = "";       //Assignment 50 - create a while loop.
-let i = 0;
-while (i < 10) {
-    text += "<br>The number is " + i;
-    i++;
+function Call_Loop() {
+    let text = "";       //Assignment 50 - create a while loop.
+    let i = 0;
+    while (i < 10) {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    document.getElementById("Loop").innerHTML = text;
 }
-document.getElementById("Call_Loop").innerHTML = text;*/
 
-let text = "Hello World!";    //Challenge 3 - string length property
-let length = text.length;
+let text1 = "Hello World!";    //Challenge 3 - string length property
+let length = text1.length;
 document.getElementById("string_lengt").innerHTML = length;
 
 //Assignment 51 - for loop
@@ -65,3 +67,29 @@ document.getElementById("Challenge_14").innerHTML = myFunction("John");
 function myFunction(name) {
     return "Hello " + name;
 }
+
+//Assignment 55
+let car = {
+    make: "Dodge ",
+    model: "Viper ",
+    year: "2021 ",
+    color: "red ",
+    description: function () {
+        return "The car is a " + this.year + this.color + this.make + this.model;
+    }
+}
+
+//Challenge 15
+let text2 = "";   //A loop with a break statement.
+for (let i = 0; i < 10; i++) {
+    if (i === 3) { break; }
+    text2 += "The number is " + i + "<br>";
+}
+document.getElementById("brake_statement").innerHTML = text2;
+
+let text3 = "";   //A loop with a continue statement.
+for (let i = 0; i < 10; i++) {
+    if (i === 3) { continue; }
+    text3 += "The number is " + i + "<br>";
+}
+document.getElementById("continue_statement").innerHTML = text3;
