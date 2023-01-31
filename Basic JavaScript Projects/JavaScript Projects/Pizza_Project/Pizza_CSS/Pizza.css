@@ -1,0 +1,79 @@
+body {
+    /*Assign a background color to your <body> element.*/
+    background-color: blue;
+}
+
+h1 {
+    /*Assign a font family and a color to all <h1> elements.*/
+    font-family: 'Open Sans', sans-serif;
+    color: green;
+}
+
+h3 {
+    /*Assign a font family and a color to all <h3> elements.*/
+    font-family: 'Garamond', serif;
+    color: red;
+}
+
+div {
+    /*Assign a font family and a color to all <div> elements.*/
+    font-family: 'Courier New', monospace;
+    color: white;
+}
+
+#menuBG {
+    width: 400px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    width: 400px;
+    height: 200px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top: 0;
+    margin: 0px auto;
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btn {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+}
