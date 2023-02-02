@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/todo.css">
+        <title>ToDo</title>
+    </head>
+    <body>
+        <input id="task"><button id="add">Add Item</button>
+        <hr>
+        <div id="todos"></div>
+
+        <script src="js/todo.js"></script>
+    
+        <div class="footer">
+    <h3>Add an element at the bottom of your page that has some footer information</h3>    
+    <p>HTML ToDo App Challenge</p>
+    </div>
+    <p id="JSON_stringify"></p>
+    <p>The value of "firstName" is:</p>
+    <p id="JSON_parseMethod"></p>
+
+    <p>Method Assignment:</p>
+    <p id="localStorageMethod"></p>
+
+
+<script>
+var obj = { "name":"John", "age":30, "city":"New York"};
+var myJSON = JSON.stringify(obj);
+document.getElementById("JSON_stringify").innerHTML = myJSON;
+
+var obj = JSON.parse('{"firstName":"John", "lastName":"Doe"}');
+document.getElementById("JSON_parseMethod").innerHTML = obj.firstName;
+
+// Set Item
+localStorage.setItem("method", "localStorage");
+// Retrieve
+document.getElementById("localStorageMethod").innerHTML = localStorage.getItem("method");
+</script>
+    </body>
+    
+</html>

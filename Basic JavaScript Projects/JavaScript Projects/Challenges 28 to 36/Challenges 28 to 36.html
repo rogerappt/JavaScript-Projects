@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Challenges 28 to 36</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <style>
+        body {
+    opacity: 1;
+    transition: 5s opacity;
+  }
+  
+  body.fade-out {
+    opacity: 0;
+    transition: none;
+  }
+  {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 228px;
+  width: 280px;
+}
+
+.open-contact-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 120px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    border: 1px solid #292929;
+    transition: transform 2s;
+}
+img:hover{
+    transform: scale(1.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#section1 {
+  height: 80px;
+  background-color: pink;
+}
+
+#section2 {
+  height: 80px;
+  background-color: yellow;
+}
+
+#section3 {
+  height: 80px;
+  background-color: red;
+}
+
+#slideshow { 
+  margin: 50px auto; 
+  position: relative; 
+  width: 240px; 
+  height: 240px; 
+  padding: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+}
+
+div1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 380px;}
+}
+
+
+
+    </style>   
+    </head>
+<body>
+    
+    <script>
+        document.body.classList.add('fade-out');
+        window.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+      });
+
+      function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+  .fadeOut(1000)
+  .next()
+  .fadeIn(1000)
+  .end()
+  .appendTo('#slideshow');
+}, 3000);
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function openFormContact() {
+  document.getElementById("myFormContact").style.display = "block";
+}
+
+function closeFormContact() {
+  document.getElementById("myFormContact").style.display = "none";
+}
+      </script>
+      
+<div1><h3 style="font-size:5vw;">The remainder of the course consists of:</h3></div1>
+<p style="font-size:3vw;">1.A series of challenges to prepare you for updating your portfolio website.</p>
+<p style="font-size:2.5vw;">2.Upgrading your portfolio site with HTML, CSS and JavaScript.</p>
+<p style="font-size:2vw;">3.Pushing your upgraded site to the internet.</p>
+<p style="font-size:1vw;">4.Final exam.</p>
+
+<a href="url">https://www.youtube.com/</a>
+
+<div id="slideshow">
+    <div>
+      <img src="img1.png">
+    </div>
+    <div>
+      <img src="img2.png">
+    </div>
+    <div>
+       <img src="img3.jpg">
+    </div>    
+</div>
+
+
+<h1>In the following challenges, you can definitely use code you find online but:</h1>
+
+<div class="main" id="section1">
+  <h2>Section 1</h2>
+  <p>You must type it out instead of copy and pasting, and</p>
+  <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+
+  <div class="main" id="section2">
+    <h2>Section 2</h2>
+    <p>You are encouraged to customize data (i.e. choose your own images, write your own values, etc.).</p>
+    <a href="#section3">Click Me to Smooth Scroll to Section 3 Below</a>
+
+<div class="main" id="section3">
+    <h2>Section 3</h2>
+    <p>Successfully run each challenge in the browser.</p>
+    <a href="#section1">Click Me to Smooth Scroll to Section 1 Below</a>
+   
+
+
+<h2>Challenge 30 form</h2>
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="submit" value="Submit">  
+</form> <br><br>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+  </form><br><br><br>
+  
+<!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<button class="open-contact-button" onclick="openFormContact()">Contact Us</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>  
+
+<!-- The contact form -->
+<div class="form-popup" id="myFormContact">
+    <form action="/action_page.php" class="form-container">
+      <h1>Contact</h1>
+
+      office@test.com<br><br>
+
+      <button type="button" class="btn cancel" onclick="closeFormContact()">Close</button>
+    </form>
+  </div> 
+
+ <img src="img.png">
+
+</div>
+</div2>
+</body>
+</html>
